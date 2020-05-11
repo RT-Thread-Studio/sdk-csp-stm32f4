@@ -12,7 +12,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "uart_config.h"
-#include <board.h>
+#include <board_cfg.h>
 
 static UART_HandleTypeDef handle;
 
