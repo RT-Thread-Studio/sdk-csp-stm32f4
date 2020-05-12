@@ -24,12 +24,12 @@ series:
       prompt_message_en: select one uart as console output interface
       prompt_message_zh: 选择一个串口作为控制台信息输出接口
     tx_pin:
-      default_value: PA2
+      default_value: PA9
       prompt_message_en: 'set the tx pin name of the console device interface, the
         value should be with a format"P+[port name][pin number]",eg. PA2,PB6 '
       prompt_message_zh: 设置控制台设备的数据发送引脚的名称, 名称应该具有以下格式“P+[端口名称][端口编号]”, 比如：PA2, PB6
     rx_pin:
-      default_value: PA3
+      default_value: PA10
       prompt_message_en: 'set the rx pin name of the console device interface, the
         value should be with a format"P+[port name][pin number]", eg. PA3, PB7 '
       prompt_message_zh: 设置控制台设备的数据发送引脚的名称，名称应该具有以下格式“P+[端口名称][端口编号]”, 比如：PA2, PB6
