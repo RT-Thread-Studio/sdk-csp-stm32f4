@@ -1,0 +1,37 @@
+import os
+from building import *
+
+
+def modify_board_h_file(filepath, include_str):
+    is_include_file_exist = False
+
+    with open(filepath, mode='r') as f:
+        for line in f:
+            if include_str.strip() in line:
+                is_include_file_exist = True
+                break
+
+    if not is_include_file_exist:
+        w_str = ""
+        with open(filepath, mode='r') as f:
+            for line in f:
+                if '#define __BOARD_H__' in line:
+                    w_str += line
+                    w_str += include_str
+                else:
+                    w_str += line
+        with open(filepath, mode='w') as f:
+            f.write(w_str)
+
+
+cwd = GetCurrentDir()
+group = DefineGroup('', [], depend=[''], CPPPATH=[])
+
+file_path = "board.h"
+include_str = """
+#include <stm32f4xx.h>
+"""
+modify_board_h_file(os.path.join(cwd, file_path), include_str)
+os.remove(os.path.join(cwd,"SConscript"))
+
+Return('group')

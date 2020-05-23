@@ -7,6 +7,7 @@
  * Date           Author       Notes
  * 2018-10-30     SummerGift   first version
  * 2019-01-03     zylx         modify dma support
+ * 2020-05-18     chenyaxing   modify uart_config struct
  */
 
 #ifndef __UART_CONFIG_H__

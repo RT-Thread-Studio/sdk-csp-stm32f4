@@ -6,6 +6,7 @@
  * Change Logs:
  * Date           Author       Notes
  * 2019-11-09     xiangxistu   first version
+ * 2020-05-18     chenyaxing   modify stm32_uart_config struct
  */
 
 #include <string.h>
@@ -212,7 +213,7 @@ static long stm32_gpio_clk_enable(GPIO_TypeDef *gpiox)
     return 0;
 }
 
-char * up_char(char * c)
+static int up_char(char * c)
 {
     if ((*c >= 'a') && (*c <= 'z'))
     {
