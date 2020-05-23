@@ -45,7 +45,7 @@ series:
           - STM32F401xC
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xc.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -77,7 +77,7 @@ series:
           - STM32F401xC
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xc.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -109,7 +109,7 @@ series:
           - STM32F401xC
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xc.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -141,7 +141,7 @@ series:
           - STM32F401xC
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xc.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -173,7 +173,7 @@ series:
           - STM32F401xC
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xc.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -205,7 +205,7 @@ series:
           - STM32F401xC
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xc.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xc.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -237,7 +237,7 @@ series:
           - STM32F401xE
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xe.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -269,7 +269,7 @@ series:
           - STM32F401xE
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xe.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -301,7 +301,7 @@ series:
           - STM32F401xE
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xe.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -333,7 +333,7 @@ series:
           - STM32F401xE
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xe.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -365,7 +365,7 @@ series:
           - STM32F401xE
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xe.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -397,7 +397,7 @@ series:
           - STM32F401xE
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f401xe.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f401xe.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -495,7 +495,7 @@ series:
           - STM32F410Cx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f410cx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f410cx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -527,7 +527,7 @@ series:
           - STM32F410Rx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f410rx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f410rx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -559,7 +559,7 @@ series:
           - STM32F410Tx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f410tx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f410tx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -591,7 +591,7 @@ series:
           - STM32F410Cx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f410cx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f410cx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -623,7 +623,7 @@ series:
           - STM32F410Rx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f410rx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f410rx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -655,7 +655,7 @@ series:
           - STM32F410Tx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f410tx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f410tx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -932,7 +932,7 @@ series:
         - STM32F411xE
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f411xe.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -1007,7 +1007,7 @@ series:
           - STM32F412Cx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f412cx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f412cx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -1039,7 +1039,7 @@ series:
           - STM32F412Cx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f412cx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f412cx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -1071,7 +1071,7 @@ series:
           - STM32F412Rx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f412rx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f412rx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -1103,7 +1103,7 @@ series:
           - STM32F412Rx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f412rx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f412rx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -1135,7 +1135,7 @@ series:
           - STM32F412Vx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f412vx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f412vx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -1167,7 +1167,7 @@ series:
           - STM32F412Vx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f412vx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f412vx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -1199,7 +1199,7 @@ series:
           - STM32F412Zx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f412zx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f412zx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -1231,7 +1231,7 @@ series:
           - STM32F412Zx
           files:
           - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f412zx.S
-          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+          - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f412zx.h
           - libraries\CMSIS\Lib\GCC
         armcc:
           entry_point: none
@@ -1620,7 +1620,7 @@ series:
         - STM32F413xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f413xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f413xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -1846,7 +1846,7 @@ series:
         - STM32F423xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f423xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f423xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -2099,7 +2099,7 @@ series:
         - STM32F405xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f405xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f405xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -2385,7 +2385,7 @@ series:
         - STM32F407xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f407xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -2605,7 +2605,7 @@ series:
         - STM32F415xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f415xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f415xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -2891,7 +2891,7 @@ series:
         - STM32F417xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f417xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f417xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -3243,7 +3243,7 @@ series:
         - STM32F427xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f427xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f427xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -3892,7 +3892,7 @@ series:
         - STM32F429xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f429xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f429xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -4211,7 +4211,7 @@ series:
         - STM32F437xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f437xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f437xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -4662,7 +4662,7 @@ series:
         - STM32F439xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f439xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f439xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -4974,7 +4974,7 @@ series:
         - STM32F446xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f446xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f446xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -5564,7 +5564,7 @@ series:
         - STM32F469xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f469xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f469xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -5986,7 +5986,7 @@ series:
         - STM32F479xx
         files:
         - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\gcc\startup_stm32f479xx.S
-        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+        - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f479xx.h
         - libraries\CMSIS\Lib\GCC
       armcc:
         entry_point: none
@@ -6049,7 +6049,8 @@ series:
     - libraries\STM32F4xx_HAL_Driver
     - libraries\CMSIS\Include
     - libraries\CMSIS\RTOS
-    - libraries\CMSIS\Device\ST\STM32F4xx\Include
+    - libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+    - libraries\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
     - libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
   cpu_info:
     core: Cortex-M4
