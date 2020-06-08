@@ -9,7 +9,8 @@ MEMORY
     RAM (rw) : ORIGIN = 0x20000000, LENGTH =  32k /* 32K sram */
 }
 ENTRY(Reset_Handler)
-_system_stack_size = 0x1000;
+_system_stack_size = 0x400;
+
 SECTIONS
 {
     .text :
