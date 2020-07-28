@@ -291,16 +291,6 @@ static rt_err_t stm32_gpio_configure(struct stm32_uart_config *config)
     return RT_EOK;
 }
 
-
-void HAL_UART_MspInit(UART_HandleTypeDef *huart)
-{
-    /* if this uart is shell function */
-    if(huart == &handle)
-    {
-        stm32_gpio_configure(_uart_config);
-    }
-}
-
 static rt_err_t stm32_configure(struct stm32_uart_config *config)
 {
     stm32_uart_clk_enable(config);
@@ -318,6 +308,7 @@ static rt_err_t stm32_configure(struct stm32_uart_config *config)
     {
         return -RT_ERROR;
     }
+    stm32_gpio_configure(_uart_config);
 
     return RT_EOK;
 }

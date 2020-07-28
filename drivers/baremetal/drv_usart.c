@@ -281,15 +281,6 @@ static long stm32_gpio_configure(struct stm32_uart_config *config)
     return 0;
 }
 
-void HAL_UART_MspInit(UART_HandleTypeDef *huart)
-{
-    /* if this uart is shell function */
-    if(huart == &handle)
-    {
-        stm32_gpio_configure(_uart_config);
-    }
-}
-
 static long stm32_configure(struct stm32_uart_config *config)
 {
     stm32_uart_clk_enable(config);
@@ -307,6 +298,7 @@ static long stm32_configure(struct stm32_uart_config *config)
     {
         return -1;
     }
+    stm32_gpio_configure(_uart_config);
 
     return 0;
 }
