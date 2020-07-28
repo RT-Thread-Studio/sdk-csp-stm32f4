@@ -48,20 +48,11 @@ void SysTick_Handler(void)
     rt_interrupt_leave();
 }
 
-uint32_t HAL_GetTick(void)
-{
-    return rt_tick_get() * 1000 / RT_TICK_PER_SECOND;
-}
-
 void HAL_SuspendTick(void)
 {
 }
 
 void HAL_ResumeTick(void)
-{
-}
-
-void HAL_Delay(__IO uint32_t Delay)
 {
 }
 
