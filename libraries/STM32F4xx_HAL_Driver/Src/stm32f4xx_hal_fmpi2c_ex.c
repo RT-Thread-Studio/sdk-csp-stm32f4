@@ -5,8 +5,7 @@
   * @brief   FMPI2C Extended HAL module driver.
   *          This file provides firmware functions to manage the following
   *          functionalities of FMPI2C Extended peripheral:
-  *           + Filter Mode Functions
-  *           + FastModePlus Functions
+  *           + Extended features functions
   *
   @verbatim
   ==============================================================================
@@ -69,15 +68,16 @@
   * @{
   */
 
-/** @defgroup FMPI2CEx_Exported_Functions_Group1 Filter Mode Functions
-  * @brief    Filter Mode Functions
-  *
+/** @defgroup FMPI2CEx_Exported_Functions_Group1 Extended features functions
+  * @brief    Extended features functions
+ *
 @verbatim
  ===============================================================================
-                      ##### Filter Mode Functions #####
+                      ##### Extended features functions #####
  ===============================================================================
     [..] This section provides functions allowing to:
       (+) Configure Noise Filters
+      (+) Configure Fast Mode Plus
 
 @endverbatim
   * @{
@@ -178,23 +178,6 @@ HAL_StatusTypeDef HAL_FMPI2CEx_ConfigDigitalFilter(FMPI2C_HandleTypeDef *hfmpi2c
     return HAL_BUSY;
   }
 }
-/**
-  * @}
-  */
-
-/** @defgroup FMPI2CEx_Exported_Functions_Group3 Fast Mode Plus Functions
-  * @brief    Fast Mode Plus Functions
-  *
-@verbatim
- ===============================================================================
-                      ##### Fast Mode Plus Functions #####
- ===============================================================================
-    [..] This section provides functions allowing to:
-      (+) Configure Fast Mode Plus
-
-@endverbatim
-  * @{
-  */
 
 /**
   * @brief Enable the FMPI2C fast mode plus driving capability.
@@ -241,9 +224,11 @@ void HAL_FMPI2CEx_DisableFastModePlus(uint32_t ConfigFastModePlus)
   /* Disable fast mode plus driving capability for selected pin */
   CLEAR_BIT(SYSCFG->CFGR, (uint32_t)ConfigFastModePlus);
 }
+
 /**
   * @}
   */
+
 /**
   * @}
   */
