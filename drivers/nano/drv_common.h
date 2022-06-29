@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2006-2018, RT-Thread Development Team
+ * Copyright (c) 2006-2021, RT-Thread Development Team
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -17,8 +17,7 @@
 #include <stm32f4xx.h>
 
 #ifdef __cplusplus
-extern "C"
-{
+extern "C" {
 #endif
 
 void _Error_Handler(char *s, int num);
@@ -30,7 +29,13 @@ void _Error_Handler(char *s, int num);
 #define DMA_NOT_AVAILABLE ((DMA_INSTANCE_TYPE *)0xFFFFFFFFU)
 
 #define __STM32_PORT(port)  GPIO##port##_BASE
+
+#if defined(SOC_SERIES_STM32MP1)
+#define GET_PIN(PORTx,PIN) (GPIO##PORTx == GPIOZ) ? (176 + PIN) : ((rt_base_t)((16 * ( ((rt_base_t)__STM32_PORT(PORTx) - (rt_base_t)GPIOA_BASE)/(0x1000UL) )) + PIN))
+#else
 #define GET_PIN(PORTx,PIN) (rt_base_t)((16 * ( ((rt_base_t)__STM32_PORT(PORTx) - (rt_base_t)GPIOA_BASE)/(0x0400UL) )) + PIN)
+#endif
+
 #define STM32_FLASH_START_ADRESS       ROM_START
 #define STM32_FLASH_SIZE               ROM_SIZE
 #define STM32_FLASH_END_ADDRESS        ROM_END
@@ -51,6 +56,7 @@ extern int __bss_end;
 #endif
 
 #define HEAP_END                       STM32_SRAM1_END
+
 #ifdef __cplusplus
 }
 #endif

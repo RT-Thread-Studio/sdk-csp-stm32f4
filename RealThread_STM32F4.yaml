@@ -2,7 +2,7 @@
 vendor: RealThread
 dvendor: STMicroelectronics
 name: STM32F4
-version: 0.2.0
+version: 0.3.0
 yaml_version: 1
 type: Chip_Support_Packages
 family_name: STM32
