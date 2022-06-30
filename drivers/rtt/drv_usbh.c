@@ -10,7 +10,7 @@
  */
 
 #include "board.h"
-#ifdef BSP_USING_USBH
+#ifdef BSP_USING_USBHOST
 #include "drv_usbh.h"
 
 static HCD_HandleTypeDef stm32_hhcd_fs;

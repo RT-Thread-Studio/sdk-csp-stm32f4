@@ -11,7 +11,7 @@
 
 #include "board.h"
 
-#ifdef BSP_USING_USBD
+#ifdef BSP_USING_USBDEVICE
 
 #include <string.h>
 #include <drv_config.h>
