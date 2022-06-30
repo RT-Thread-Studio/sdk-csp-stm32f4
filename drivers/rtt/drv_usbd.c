@@ -9,11 +9,10 @@
  * 2019-10-27     flybreak     Compatible with the HS
  */
 
-#include <rtthread.h>
+#include "board.h"
 
 #ifdef BSP_USING_USBD
-#include <rtdevice.h>
-#include "board.h"
+
 #include <string.h>
 #include <drv_config.h>
 

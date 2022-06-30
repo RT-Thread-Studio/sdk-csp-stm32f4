@@ -12,10 +12,10 @@
  */
 
 #include "board.h"
-#include "drv_sdio.h"
-#include "drv_config.h"
 
 #ifdef BSP_USING_SDIO
+#include "drv_sdio.h"
+#include "drv_config.h"
 
 //#define DRV_DEBUG
 #define LOG_TAG             "drv.sdio"

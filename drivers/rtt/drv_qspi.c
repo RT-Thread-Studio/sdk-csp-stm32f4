@@ -9,10 +9,10 @@
  */
 
 #include "board.h"
-#include "drv_qspi.h"
-#include "drv_config.h"
 
 #ifdef RT_USING_QSPI
+#include "drv_qspi.h"
+#include "drv_config.h"
 
 #define DRV_DEBUG
 #define LOG_TAG              "drv.qspi"

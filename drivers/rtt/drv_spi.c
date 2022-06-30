@@ -13,8 +13,6 @@
  * 2020-10-14     Dozingfiretruck   Porting for stm32wbxx
  */
 
-#include <rtthread.h>
-#include <rtdevice.h>
 #include "board.h"
 
 #ifdef RT_USING_SPI

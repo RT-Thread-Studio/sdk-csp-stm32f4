@@ -9,9 +9,9 @@
  */
 
 #include "board.h"
-#include "drv_usart_v2.h"
 
 #ifdef RT_USING_SERIAL_V2
+#include "drv_usart_v2.h"
 
 //#define DRV_DEBUG
 #define DBG_TAG              "drv.usart"

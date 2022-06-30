@@ -14,12 +14,11 @@
 
 #include <rtthread.h>
 #include <rtdevice.h>
-
+#include <board.h>
 #ifdef RT_USING_HWCRYPTO
 #include <stdlib.h>
 #include <string.h>
 #include "drv_crypto.h"
-#include "board.h"
 #include "drv_config.h"
 
 struct stm32_hwcrypto_device

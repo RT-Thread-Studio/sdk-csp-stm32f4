@@ -14,13 +14,14 @@
  * 2020-10-14     Dozingfiretruck   Porting for stm32wbxx
  */
 
-#include "string.h"
-#include "stdlib.h"
 #include "board.h"
-#include "drv_usart.h"
-#include "drv_config.h"
 
 #ifdef RT_USING_SERIAL
+
+#include "string.h"
+#include "stdlib.h"
+#include "drv_usart.h"
+#include "drv_config.h"
 
 //#define DRV_DEBUG
 #define LOG_TAG             "drv.usart"

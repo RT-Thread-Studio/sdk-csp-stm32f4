@@ -11,10 +11,10 @@
  * 2019-09-03     xiaofan      optimize link change detection process
  */
 
-#include "drv_config.h"
-
+#include <board.h>
 #ifdef BSP_USING_ETH
 
+#include "drv_config.h"
 #include "drv_eth.h"
 #include <netif/ethernetif.h>
 #include <lwipopts.h>

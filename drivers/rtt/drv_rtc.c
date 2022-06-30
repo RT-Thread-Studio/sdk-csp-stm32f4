@@ -12,9 +12,9 @@
  */
 
 #include "board.h"
-#include <sys/time.h>
 
 #ifdef BSP_USING_ONCHIP_RTC
+#include <sys/time.h>
 
 #ifndef RTC_BKP_DR1
 #define RTC_BKP_DR1 RT_NULL
