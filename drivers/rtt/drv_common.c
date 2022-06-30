@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2006-2018, RT-Thread Development Team
+ * Copyright (c) 2006-2021, RT-Thread Development Team
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -11,25 +11,40 @@
 #include "drv_common.h"
 #include "board.h"
 
+#ifdef RT_USING_SERIAL
+#ifdef RT_USING_SERIAL_V2
+#include "drv_usart_v2.h"
+#else
+#include "drv_usart.h"
+#endif /* RT_USING_SERIAL */
+#endif /* RT_USING_SERIAL_V2 */
+
+#define DBG_TAG    "drv_common"
+#define DBG_LVL    DBG_INFO
+#include <rtdbg.h>
+
 #ifdef RT_USING_FINSH
 #include <finsh.h>
 static void reboot(uint8_t argc, char **argv)
 {
     rt_hw_cpu_reset();
 }
-FINSH_FUNCTION_EXPORT_ALIAS(reboot, __cmd_reboot, Reboot System);
+MSH_CMD_EXPORT(reboot, Reboot System);
 #endif /* RT_USING_FINSH */
+
+extern __IO uint32_t uwTick;
+static uint32_t _systick_ms = 1;
 
 /* SysTick configuration */
 void rt_hw_systick_init(void)
 {
-#if defined (SOC_SERIES_STM32H7)
-    HAL_SYSTICK_Config((HAL_RCCEx_GetD1SysClockFreq()) / RT_TICK_PER_SECOND);
-#else
-    HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq() / RT_TICK_PER_SECOND);
-#endif
-    HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
-    HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
+    HAL_SYSTICK_Config(SystemCoreClock / RT_TICK_PER_SECOND);
+
+    NVIC_SetPriority(SysTick_IRQn, 0xFF);
+
+    _systick_ms = 1000u / RT_TICK_PER_SECOND;
+    if(_systick_ms == 0)
+        _systick_ms = 1;
 }
 
 /**
@@ -41,11 +56,26 @@ void SysTick_Handler(void)
     /* enter interrupt */
     rt_interrupt_enter();
 
-    HAL_IncTick();
+    if(SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk)
+        HAL_IncTick();
+
     rt_tick_increase();
 
     /* leave interrupt */
     rt_interrupt_leave();
+}
+
+uint32_t HAL_GetTick(void)
+{
+    if(SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk)
+        HAL_IncTick();
+
+    return uwTick;
+}
+
+void HAL_IncTick(void)
+{
+    uwTick += _systick_ms;
 }
 
 void HAL_SuspendTick(void)
@@ -56,9 +86,26 @@ void HAL_ResumeTick(void)
 {
 }
 
+void HAL_Delay(__IO uint32_t Delay)
+{
+    if (rt_thread_self())
+    {
+        rt_thread_mdelay(Delay);
+    }
+    else
+    {
+        for (rt_uint32_t count = 0; count < Delay; count++)
+        {
+            rt_hw_us_delay(1000);
+        }
+    }
+}
+
 /* re-implement tick interface for STM32 HAL */
 HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
 {
+    rt_hw_systick_init();
+
     /* Return function status */
     return HAL_OK;
 }
@@ -72,7 +119,8 @@ void _Error_Handler(char *s, int num)
 {
     /* USER CODE BEGIN Error_Handler */
     /* User can add his own implementation to report the HAL error return state */
-    while(1)
+    LOG_E("Error_Handler at file:%s num:%d", s, num);
+    while (1)
     {
     }
     /* USER CODE END Error_Handler */
@@ -85,14 +133,32 @@ void _Error_Handler(char *s, int num)
  */
 void rt_hw_us_delay(rt_uint32_t us)
 {
-    rt_uint32_t start, now, delta, reload, us_tick;
-    start = SysTick->VAL;
-    reload = SysTick->LOAD;
-    us_tick = SystemCoreClock / 1000000UL;
-    do {
-        now = SysTick->VAL;
-        delta = start > now ? start - now : reload + start - now;
-    } while(delta < us_tick * us);
+    rt_uint32_t ticks;
+    rt_uint32_t told, tnow, tcnt = 0;
+    rt_uint32_t reload = SysTick->LOAD;
+
+    ticks = us * reload / (1000000 / RT_TICK_PER_SECOND);
+    told = SysTick->VAL;
+    while (1)
+    {
+        tnow = SysTick->VAL;
+        if (tnow != told)
+        {
+            if (tnow < told)
+            {
+                tcnt += told - tnow;
+            }
+            else
+            {
+                tcnt += reload - tnow + told;
+            }
+            told = tnow;
+            if (tcnt >= ticks)
+            {
+                break;
+            }
+        }
+    }
 }
 
 /**
@@ -103,12 +169,12 @@ void hw_board_init(char *clock_src, int32_t clock_src_freq, int32_t clock_target
     extern void rt_hw_systick_init(void);
     extern void clk_init(char *clk_source, int source_freq, int target_freq);
 
-#ifdef SCB_EnableICache
+#ifdef BSP_SCB_ENABLE_I_CACHE
     /* Enable I-Cache---------------------------------------------------------*/
     SCB_EnableICache();
 #endif
 
-#ifdef SCB_EnableDCache
+#ifdef BSP_SCB_ENABLE_D_CACHE
     /* Enable D-Cache---------------------------------------------------------*/
     SCB_EnableDCache();
 #endif
@@ -138,3 +204,4 @@ void hw_board_init(char *clock_src, int32_t clock_src_freq, int32_t clock_target
 #endif
 
 }
+

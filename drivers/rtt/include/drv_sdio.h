@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2006-2018, RT-Thread Development Team
+ * Copyright (c) 2006-2021, RT-Thread Development Team
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -19,8 +19,6 @@
 #include <string.h>
 #include <drivers/mmcsd_core.h>
 #include <drivers/sdio.h>
-
-#ifdef BSP_USING_SDIO
 
 #if defined(SOC_SERIES_STM32F1) || defined(SOC_SERIES_STM32F2) || defined(SOC_SERIES_STM32F4)
 #define SDCARD_INSTANCE_TYPE              SDIO_TypeDef
@@ -196,5 +194,3 @@ struct stm32_sdio_class
 extern void stm32_mmcsd_change(void);
 
 #endif
-
-#endif /* BSP_USING_SDIO */
